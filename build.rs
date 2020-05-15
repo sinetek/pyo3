@@ -582,14 +582,14 @@ fn check_rustc_version() -> Result<()> {
         )
     }
 
-    let actual_date = Date::read().ok_or("Failed to determine the rustc date")?;
-    if !actual_date.at_least(MIN_DATE) {
-        bail!(
-            "PyO3 requires at least rustc {}, while the current rustc date is {}",
-            MIN_DATE,
-            actual_date
-        )
-    }
+    //let actual_date = Date::read().ok_or("Failed to determine the rustc date")?;
+    //if !actual_date.at_least(MIN_DATE) {
+    //    bail!(
+    //        "PyO3 requires at least rustc {}, while the current rustc date is {}",
+    //        MIN_DATE,
+    //        actual_date
+    //    )
+    //}
     Ok(())
 }
 
